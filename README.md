@@ -17,7 +17,7 @@
 
 <a href="https://velog.io/@zorba86" target="_blank"><img src="https://img.shields.io/badge/Velog-20c997?style=flat-square&logo=Vimeo&logoColor=white"/></a>
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=[https://www.linkedin.com/in/hyunjun-son-b116331a4/)](https://www.linkedin.com/in/hyunjun-son-b116331a4//)
-[![Instagram Badge](https://img.shields.io/badge/-Instagram-dd2a7b?style=flat-square&logo=instagram&logoColor=white&link=https://www.instagram.com/jjang3a)]([https://www.instagram.com/lv.28_0c9y2j5/](https://www.instagram.com/jjang3a/))
+[![Instagram Badge](https://img.shields.io/badge/-Instagram-dd2a7b?style=flat-square&logo=instagram&logoColor=white&link=[https://www.instagram.com/jjang3a/)](https://www.instagram.com/jjang3a/)
 
 </div>
 
