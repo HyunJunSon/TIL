@@ -1,8 +1,6 @@
 
 9
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-<
-Jpa/chapter1,f/1/f1da54b0033f02337bba04cc26cc290d973b26ef
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
@@ -20,3 +18,9 @@ T
 $TestCodeStudy/ch01/Junit첫걸음.md,e/b/eb91c18e34055d9d4ad54f2a7d264420071a7e65
 `
 0TestCodeStudy/ch02/Junit핵심들여다보기.md,3/5/35afe46365b26572f80148a36a35eb750a3d859d
+8
+Jpa/ch03,a/9/a9c83a61107486c25ad648f34b30b6b0e34e27d0
+S
+#Jpa/ch03/chpter3 영속성관리.md,0/e/0e917c8acc63fd35bd2dbfe64e0b988a34da944a
+D
+Jpa/ch01/chapter1.md,3/5/35ee671c66f3d74b811468cf2614177b5657d3f1
