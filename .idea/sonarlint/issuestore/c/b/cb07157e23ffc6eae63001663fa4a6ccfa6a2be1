@@ -1,0 +1,12 @@
+
+7
+java:S1220""Move this file to a named package.8÷ßİÇ1
+V
+java:S3400"9Remove this method and declare a constant for this value.(È¸å8î®àÇ1
+L
+java:S1172"*Remove this unused method parameter "arg".(õŸõ€ûÿÿÿÿ8şßİÇ1
+V
+java:S3400"9Remove this method and declare a constant for this value.(Úåö8íÑàÇ1
+L
+java:S1172"*Remove this unused method parameter "arg".(Ğø¸¸ÿÿÿÿÿ8ÿßİÇ1
+L	java:S106"+Replace this use of System.out by a logger.(®ıáëûÿÿÿÿ8€àİÇ1
