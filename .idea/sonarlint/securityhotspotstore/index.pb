@@ -120,3 +120,5 @@ t김영한강의정리/spring_mvc_1/section1 웹 어플리케이션 이해/웹�
 Y김영한강의정리/자바ORM표준 JPA 프로그래밍-기본편/section1/JPA소개.md,f/f/ffbb33180b987df812cb3c2299e6492cfd7707bd
 X
 (Jpa/ch10/객체지향쿼리언어ver1.md,2/b/2b6b1994c8dae5aaef82273cb7f3ceb3dd4edafc
+�
+`김영한강의정리/spring_mvc_1/section6. 스프링 MVC-기본기능/springMvc기본기능.md,b/c/bc78e3d829c1b6a221d4a959fec42b1066956420
