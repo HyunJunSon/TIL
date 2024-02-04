@@ -122,3 +122,7 @@ X
 (Jpa/ch10/객체지향쿼리언어ver1.md,2/b/2b6b1994c8dae5aaef82273cb7f3ceb3dd4edafc
 �
 `김영한강의정리/spring_mvc_1/section6. 스프링 MVC-기본기능/springMvc기본기능.md,b/c/bc78e3d829c1b6a221d4a959fec42b1066956420
+X
+(Jpa/ch10/객체지향쿼리언어ver2.md,0/3/031762269109c7d2e9d8724e36eaf9e2c7ad26c5
+�
+\김영한강의정리/spring_mvc_1/section7. 스프링MVC - 웹페이지 만들기/myPage.md,a/b/abd9126d04d3b04c90fc7c28d55088565d7a9240
