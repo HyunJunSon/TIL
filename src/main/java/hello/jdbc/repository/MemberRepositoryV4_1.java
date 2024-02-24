@@ -1,6 +1,7 @@
 package hello.jdbc.repository;
 
 import hello.jdbc.domain.Member;
+import hello.jdbc.repository.ex.MyDbException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jdbc.datasource.DataSourceUtils;
@@ -12,19 +13,20 @@ import java.sql.*;
 import java.util.NoSuchElementException;
 
 /**
- * JDBC - Transaction, Transaction Manage
- * DataSourceUtils.getConnection()
- * DataSourceUtils.releaseConnection()
+ * 예외누수 문제 해결
+ * 체크예외를 런타임 예외로 변경
+ * MemberRepository Interface 사용
+ * throws SQLException 제거
  */
 @Slf4j
 @RequiredArgsConstructor
 @Repository
-public class MemberRepositoryV3 implements MemberRepostioryEx{
+public class MemberRepositoryV4_1 implements MemberRepository {
 
     private final DataSource dataSource;
 
-
-    public Member save(Member member) throws SQLException {
+    @Override
+    public Member save(Member member) {
         String sql = "insert into member(member_id, money) values (?,?)";
 
         Connection con = null;
@@ -38,8 +40,7 @@ public class MemberRepositoryV3 implements MemberRepostioryEx{
             pstmt.executeUpdate();
             return member;
         } catch (SQLException e) {
-            log.error("db error", e);
-            throw e;
+            throw new MyDbException(e);
         } finally {
 //            pstmt.close();
 //            con.close();
@@ -48,7 +49,7 @@ public class MemberRepositoryV3 implements MemberRepostioryEx{
 
     }
 
-
+    @Override
     public Member findById(String memberId) {
         String sql = "select * from member where member_id = ?";
 
@@ -71,15 +72,14 @@ public class MemberRepositoryV3 implements MemberRepostioryEx{
                 throw new NoSuchElementException("member not found memberId=" + memberId);
             }
         } catch (SQLException e) {
-            log.error("db error", e);
-            return null;
+            throw new MyDbException(e);
         } finally {
             close(con, pstmt, null);
         }
     }
 
-
-    public void update(String memberId, int money) throws SQLException {
+    @Override
+    public void update(String memberId, int money) {
         String sql = "update member set money = ? where member_id = ?";
 
         Connection con = null;
@@ -93,14 +93,13 @@ public class MemberRepositoryV3 implements MemberRepostioryEx{
             int resultSize = pstmt.executeUpdate();
             log.info("resultSize={}", resultSize);
         } catch (SQLException e) {
-            log.error("db error", e);
-            throw e;
+            throw new MyDbException(e);
         } finally {
             close(con, pstmt, null);
         }
     }
-
-    public void delete(String memeberId) throws SQLException {
+    @Override
+    public void delete(String memeberId) {
         String sql = "delete from member where member_id=?";
 
         Connection con = null;
@@ -113,8 +112,7 @@ public class MemberRepositoryV3 implements MemberRepostioryEx{
             int resultSize = pstmt.executeUpdate();
             log.info("resultSize={}", resultSize);
         } catch (SQLException e) {
-            log.error("db error", e);
-            throw e;
+            throw new MyDbException(e);
         } finally {
             close(con, pstmt, null);
         }
@@ -130,7 +128,7 @@ public class MemberRepositoryV3 implements MemberRepostioryEx{
     }
 
 
-    private Connection getConnection() {
+    private Connection getConnection() throws MyDbException {
         //주의! 트랙젝션 동기화를 사용하려면 DataSourceutil를 사용해야 한다.
         Connection connection = DataSourceUtils.getConnection(dataSource);
         log.info("get connection={}, class={}", connection, connection.getClass());
